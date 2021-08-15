@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <!-- <img src="./assets/logo.png"> -->
-    <router-link to="/user">用户</router-link>
+    <router-link to="/login">用户登录</router-link>
     <router-view></router-view>
   </div> 
 </template>

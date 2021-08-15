@@ -32,7 +32,6 @@
         <td>{{item.hobby}}</td>
       </tr>
     </table>
-    <button v-on:click="show">点我</button>
   </div>
 </template>
 
@@ -54,11 +53,6 @@
           that.users = response.data.users;
         })
     }
-  }
-
-  function show(){
-
-    alert(1);
   }
     
 </script>
