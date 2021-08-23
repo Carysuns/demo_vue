@@ -1,12 +1,13 @@
 <template>
   <div id="maindiv">
     <el-input class="inputtext" v-model="input" maxlength="11" placeholder="请输入用户名"></el-input><br>
-    <el-input class="inputtext" placeholder="请输入密码" maxlength="11" v-model="password" show-password></el-input>
+    <el-input class="inputtext" placeholder="请输入密码" maxlength="16" v-model="password" show-password></el-input>
     <el-row id="button1">
       <el-button type="warning" @click="login">登录</el-button>
       <el-button type="danger" @click="cancel">取消</el-button>
-    </el-row><br>
-    <img id ="loginimg" src="../assets/IMG_20210613_141339 .jpg">
+      <el-button type="warning" @click="regist">注册</el-button>
+    </el-row>
+    <img style="margin-top: 20px" id ="loginimg" src="../assets/IMG_20210613_141339 .jpg">
   </div>
 </template>
 <script>
@@ -38,9 +39,9 @@ export default {
       }
 
       // 密码长度的检查
-      if (this.password.length < 8 || this.password.length > 16) {
+      if (this.password.length < 8) {
 
-        alert('密码需要在8~16位');
+        alert('密码必须大于8位');
         return;
       }
 
@@ -61,6 +62,11 @@ export default {
 
       this.input='';
       this.password='';
+    },
+
+    regist() {
+
+      window.location.href="http://localhost:8090/#/regist";
     }
   }
 }
