@@ -1,5 +1,6 @@
 <template>
-  <div id="maindiv">
+  <div>
+    <h1>用户登录</h1>
     <el-input class="inputtext" v-model="input" maxlength="11" placeholder="请输入用户名"></el-input><br>
     <el-input class="inputtext" placeholder="请输入密码" maxlength="16" v-model="password" show-password></el-input>
     <el-row id="button1">

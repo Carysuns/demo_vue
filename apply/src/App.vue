@@ -1,14 +1,14 @@
 <template>
   <div id="app">
     <!-- <img src="./assets/logo.png"> -->
-    <router-link to="/login">用户登录</router-link>
+    <router-link to="/login"></router-link>
     <router-view></router-view>
   </div> 
 </template>
 
 <script>
 export default {
-  name: 'App'
+  name: 'App',
 }
 </script>
 
