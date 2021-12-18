@@ -8,10 +8,10 @@
       <el-button type="danger" @click="cancel">取消</el-button>
       <el-button type="warning" @click="regist">注册</el-button>
     </el-row>
-    <img style="margin-top: 20px" id ="loginimg" src="../assets/IMG_20210613_141339 .jpg">
+    <img style="margin-top: 35px" id ="loginimg" src="../assets/IMG_20210613_141339 .jpg">
   </div>
 </template>
-<script>
+<script> 
 export default {
   data() {
     return {
@@ -51,12 +51,17 @@ export default {
       const url = 'http://localhost:8080/user/username?user_name=' + username + '&password=' + psd;
       
       this.$axios.get(url)
-        .then(function (response) {
+        .then(response => {
           console.log(response);
           this.user = response.data.users;
+          window.location.href="http://localhost:8090/#/user";
+        },
+        error => {
+          console.log('请求失败', error.message);
+          alert('用户名或者密码错误');
         })
-
-      window.location.href="http://localhost:8090/#/user";
+      
+      
     },
 
     cancel() {
