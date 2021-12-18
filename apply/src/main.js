@@ -8,6 +8,7 @@ import VueAxios from 'vue-axios'
 import Element from 'element-ui'
 import "element-ui/lib/theme-chalk/index.css"
 
+// 关闭vue的生产提示
 Vue.config.productionTip = false
 Vue.prototype.$axios = axios
 
