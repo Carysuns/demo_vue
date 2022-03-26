@@ -1,7 +1,7 @@
 <template>
     <div>
         <h1>用户注册</h1>
-        <form>
+        <el-form :model="loginForm">
             <label>昵称:</label><el-input v-model="username" maxlength="11" placeholder="请输入用户名" style="width:300px"></el-input><br>
             <label>密码:</label><el-input v-model="password" maxlength="11" style="width:300px" placeholder="请输入密码"></el-input><br>
             <label>邮箱:</label><el-input v-model="email" maxlength="20" style="width:300px" placeholder="请输入邮箱"></el-input><br>
@@ -22,8 +22,7 @@
             <label>个人简介:</label><textarea></textarea><br>
             <el-button type="warning" @click="regist">注册</el-button>
             <el-button type="danger" @click="goLogin">返回登录</el-button>
-        </form>
-        
+        </el-form>
     </div>
 </template>
 <script>
@@ -52,7 +51,7 @@ export default {
 
         regist() {
             
-            alert("good");
+            alert("请填写信息");
         },
 
         goLogin() {
