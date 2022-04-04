@@ -11,7 +11,10 @@
     <img style="margin-top: 35px" id ="loginimg" src="../assets/IMG_20210613_141339 .jpg">
   </div>
 </template>
-<script> 
+<script>
+import Router from 'vue-router'
+
+const route = new Router()
 export default {
   data() {
     return {
@@ -54,7 +57,7 @@ export default {
         .then(response => {
           console.log(response);
           this.user = response.data.users;
-          window.location.href="http://localhost:8090/#/user";
+          window.location.href="http://localhost:8090/#/user?limit=10&offset=0";
         },
         error => {
           console.log('请求失败', error.message);
@@ -71,7 +74,6 @@ export default {
     },
 
     regist() {
-
       window.location.href="http://localhost:8090/#/regist";
     }
   }

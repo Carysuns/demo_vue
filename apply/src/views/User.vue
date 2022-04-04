@@ -47,7 +47,7 @@
 
     created () {
       const that = this;
-      this.$axios.get('http://localhost:8080/user')
+      this.$axios.get('http://localhost:8080/user?limit=10&offset=0')
         .then(function (response) {
           console.log(response);
           that.users = response.data.users;
